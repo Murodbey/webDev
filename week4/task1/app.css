@@ -1,0 +1,51 @@
+/* #shows {
+    display: flex;
+} */
+
+.showscard {
+    background-color: rgb(208, 2, 208);
+    width: fit-content;
+    border-radius: 10px;
+    margin: 20px;
+    height: 300px;
+    /* padding-top: 1em; */
+    display: flex;
+}
+
+/* .column1 {} */
+
+.column2 {
+    width: 500px;
+}
+
+.showscard img {
+    border-radius: 0.7em;
+    display: block;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.showscard h1 {
+    color: orange;
+    text-align: center;
+    margin: 0.5em;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: rgb(230, 214, 250);
+    margin-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.paraEl {
+    background-color: rgb(208, 2, 208);
+    color: yellow;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}

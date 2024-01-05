@@ -1,0 +1,46 @@
+section {
+    background-color: antiquewhite;
+    width: 800px;
+    height: 800px;
+}
+
+div {
+    background-color: pink;
+    width: 70%;
+    height: 50%;
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 80px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+article {
+    font-size: 10px;
+}
+
+p {
+    font-size: 1em;
+}
+
+button {
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+    background-color: burlywood;
+    color: gold;
+}
+
+ul {
+    font-size: 1.5em;
+}

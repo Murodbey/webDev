@@ -1,0 +1,121 @@
+#heading1 {
+    color: green;
+}
+
+.paragraph {
+    background-color: aqua;
+    padding: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.div1 {
+    background-color: aqua;
+    padding: 20px;
+    /* display: flex; */
+}
+
+.div2 {
+    background-color: orange;
+    padding: 20px;
+    margin: 10px;
+}
+
+.div2a {
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 10px;
+}
+
+.div2b {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+}
+
+.div2ba {
+    background-color: lightskyblue;
+    width: 50%;
+    text-align: center;
+}
+
+.div2bb {
+    background-color: lightyellow;
+    width: 50%;
+    text-align: center;
+}
+
+.div2c {
+    background-color: lightslategrey;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+    justify-content: space-between;
+
+}
+
+.div2ca {
+    background-color: brown;
+    width: 20%;
+}
+
+.div2cb {
+    background-color: orchid;
+    width: 20%;
+}
+
+.div2cc {
+    background-color: olive;
+    width: 20%;
+}
+
+.div2cd {
+    background-color: lightsalmon;
+    width: 20%;
+}
+
+.div2d {
+    background-color: yellow;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+    justify-content: space-between;
+
+}
+
+.div2da {
+    background-color: lightblue;
+    width: 20%;
+    max-height: 400px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.div2db {
+    background-color: goldenrod;
+    width: 20%;
+    max-height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.div2dc {
+    background-color: palevioletred;
+    width: 20%;
+    max-height: 400px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.div2dd {
+    background-color: blue;
+    width: 20%;
+    max-height: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

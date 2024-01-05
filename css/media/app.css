@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif, 'Open Sans';
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.5em;
+}
+
+ul,
+li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1500px) {
+    h1 {
+        color: purple
+    }
+
+}
+
+@media (max-width: 500px) {
+    h1 {
+        color: red;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        color: orange;
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        background-color: magenta;
+    }
+}

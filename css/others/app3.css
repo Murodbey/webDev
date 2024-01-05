@@ -1,0 +1,49 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: darkgrey;
+}
+
+
+
+h1 {
+    background-color: bisque;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+#one {
+    background-color: beige;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    /* box-sizing: border-box; */
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+#two {
+    background-color: coral;
+    border-color: blueviolet;
+    border-width: 3px;
+    border-style: dashed;
+    border-left-width: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin: 50px;
+}
+
+#three {
+    background-color: gold;
+    border: 4px dotted green;
+    border-left-style: dashed;
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    padding: 40px;
+}
+
+button {
+    padding: 15px 20px 30px 10px;
+}

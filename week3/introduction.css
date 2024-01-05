@@ -1,0 +1,37 @@
+.headline {
+    border: 5px solid black;
+    border-radius: 10px;
+    padding:20px;
+    /* padding-top: 0px;
+    padding-bottom: 0px; */
+    margin:50px;
+    background-color: lightgreen;
+    box-sizing: content-box;
+    width: 400px;
+
+    h1 {
+        background-color: red;
+        margin-top: 0;
+        margin-bottom: 0;
+        color:yellow;
+        font-size: 50px;
+        font-family:monospace;
+    }
+}
+
+/* Box Model - Margin/Border/Padding/Content */
+
+/* Block Level vs Inline Level:  div, p, h3 vs span, b, em */ 
+
+ /* Flex Box */
+
+ .htags {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .specific {
+        color: green;
+    }
+ }
+

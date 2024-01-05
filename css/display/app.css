@@ -1,0 +1,22 @@
+h1 {
+    background-color: gold;
+    border: 1px solid black;
+    display: inline;
+}
+
+span {
+    background-color: bisque;
+    border: 1px solid black;
+    display: block;
+    /* width: 500px;
+    padding: 50px;
+    margin: 50px; */
+}
+
+div {
+    background-color: antiquewhite;
+    border: 5px solid black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}

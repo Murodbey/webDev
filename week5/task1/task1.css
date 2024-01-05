@@ -1,0 +1,64 @@
+h1 {
+    background-color: lightblue;
+    text-align: center;
+    margin: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 25px;
+    justify-content: center;
+}
+
+.sun1 {
+    background-color: pink;
+    height: 150px;
+    display: flex;
+    margin: 25px;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sun1a {
+    background-color: red;
+    width: 25%;
+    padding: 25px;
+    margin: 0;
+}
+
+.sun1b {
+    background-color: yellow;
+    width: 25%;
+    padding: 25px;
+}
+
+.sun1c {
+    background-color: rgb(6, 146, 193);
+    width: 25%;
+    padding: 25px;
+}
+
+.moon2 {
+    display: flex;
+    margin: 25px;
+    justify-content: space-between;
+}
+
+.moon2a {
+    background-color: grey;
+    width: 45%;
+    height: 400px;
+    padding: 25px;
+}
+
+.moon2b {
+    background-color: blue;
+    width: 45%;
+    padding: 25px;
+}
+
+.mars3 {
+    background-color: plum;
+    height: 20px;
+    padding: 25px;
+    margin: 25px;
+}

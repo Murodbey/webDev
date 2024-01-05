@@ -1,0 +1,50 @@
+/* Create these buttons. also create a paragraph below these. and inside the paragraph it should show what button was clicked. For example: Primary clicked, Secondary clicked . . . */
+div {
+    display: inline;
+}
+
+.one:hover {
+    color: #FF00FF;
+    background-color: gold;
+    cursor: help;
+}
+
+.two:hover {
+    color: greenyellow;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.three:hover {
+    color: #e78a11;
+    background-color: rgb(237, 11, 11);
+    cursor: not-allowed;
+}
+
+.one {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 5px;
+    border: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.two {
+    background-color: white;
+    color: cornflowerblue;
+    margin: 5px;
+    border: 1px solid cornflowerblue;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.three {
+    background-color: white;
+    color: cornflowerblue;
+    margin: 5px;
+    border: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+#heading1 {
+    color: green;
+}
+
+.paragraph {
+    background-color: aqua;
+    padding: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 400px;
+    border-radius: 10px;
+}
