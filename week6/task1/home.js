@@ -4,6 +4,9 @@
 // 2) after populating separate arrays with data from api, we need to create the table rows iterating through all arrays
 //https://api.tvmaze.com/search/shows?q=police
 
+//Create three buttons with above names
+// and each should design table differently when clicked on
+
 const api = 'https://api.tvmaze.com/search/shows?q=police'
 const yhttp = new XMLHttpRequest()
 
@@ -62,11 +65,44 @@ yhttp.onload = function () {
         showsTrData.appendChild(showsTdRel)
     })
 
+    const primaryButt = document.querySelector('#primary')
+    const secondButt = document.querySelector('#secondary')
+    const thirdButt = document.querySelector('#tertiary')
+    const clearButt = document.querySelector('#noThemes')
+    console.log(primaryButt)
+    console.log(secondButt)
+    console.log(thirdButt)
+    console.log(clearButt)
+
+    const primOnClick = () => {
+        showsTable.classList.remove("tertiaryTable", "secondaryTable")
+        showsTable.classList.add("primaryTable")
+        clearButt.style.display = 'block';
+    }
+
+    const secondOnClick = () => {
+        showsTable.classList.remove("primaryTable", "tertiaryTable")
+        showsTable.classList.add("secondaryTable")
+        clearButt.style.display = 'block';
+    }
+
+    const tertiaryOnClick = () => {
+        showsTable.classList.remove("primaryTable", "secondaryTable")
+        showsTable.classList.add("tertiaryTable")
+        clearButt.style.display = 'block';
+    }
+
+    const noThemeOnClick = () => {
+        showsTable.classList.remove("primaryTable", "secondaryTable", "tertiaryTable")
+        clearButt.style.display = 'none';
+    }
 
 
-
-
-
+    primaryButt.addEventListener('click', () => console.log('test'))
+    primaryButt.addEventListener('click', primOnClick)
+    secondButt.addEventListener('click', secondOnClick)
+    thirdButt.addEventListener('click', tertiaryOnClick)
+    clearButt.addEventListener('click', noThemeOnClick)
 
 
 
