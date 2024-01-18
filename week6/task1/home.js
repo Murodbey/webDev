@@ -16,8 +16,8 @@ yhttp.onload = function () {
     console.log(this.status)
     console.log(this.response)
 
-    let responseArray = JSON.parse(this.response)
-    console.log(responseArray)
+    let rawResponseArr = JSON.parse(this.response)
+    console.log(rawResponseArr)
 
     const showEl = document.getElementById('shows')
 
@@ -44,35 +44,52 @@ yhttp.onload = function () {
     showsTrHed.appendChild(showsThType)
     showsTrHed.appendChild(showsThRel)
 
-
-    responseArray.forEach((item) => {
-        console.log(item)
-        const showsTdName = document.createElement('td')
-        showsTdName.textContent = `${item.show.name}`
-        const showsTdLang = document.createElement('td')
-        showsTdLang.textContent = `${item.show.language}`
-        const showsTdType = document.createElement('td')
-        showsTdType.textContent = `${item.show.type}`
-        const showsTdRel = document.createElement('td')
-        showsTdRel.textContent = `${item.show.premiered}`
+    function clearTable() {
+        const allRows = document.getElementsByTagName('tr')
+        console.log(allRows)
+        const arrRows = [...allRows]
+        arrRows.forEach((item) => {
+            item.remove()
+        })
+    }
 
 
-        const showsTrData = document.createElement('tr')
-        showsTable.appendChild(showsTrData)
-        showsTrData.appendChild(showsTdName)
-        showsTrData.appendChild(showsTdLang)
-        showsTrData.appendChild(showsTdType)
-        showsTrData.appendChild(showsTdRel)
-    })
+
+
+    function fillTable(responseArray) {
+        responseArray.forEach((item) => {
+            console.log(item)
+            const showsTdName = document.createElement('td')
+            showsTdName.textContent = `${item.show.name}`
+            const showsTdLang = document.createElement('td')
+            showsTdLang.textContent = `${item.show.language}`
+            const showsTdType = document.createElement('td')
+            showsTdType.textContent = `${item.show.type}`
+            const showsTdRel = document.createElement('td')
+            showsTdRel.textContent = `${item.show.premiered}`
+
+
+            const showsTrData = document.createElement('tr')
+            showsTable.appendChild(showsTrData)
+            showsTrData.appendChild(showsTdName)
+            showsTrData.appendChild(showsTdLang)
+            showsTrData.appendChild(showsTdType)
+            showsTrData.appendChild(showsTdRel)
+        })
+    }
+
+    fillTable(rawResponseArr)
 
     const primaryButt = document.querySelector('#primary')
     const secondButt = document.querySelector('#secondary')
     const thirdButt = document.querySelector('#tertiary')
     const clearButt = document.querySelector('#noThemes')
+    const sortButt = document.querySelector('#sortByName')
     console.log(primaryButt)
     console.log(secondButt)
     console.log(thirdButt)
     console.log(clearButt)
+    console.log(sortButt)
 
     const primOnClick = () => {
         showsTable.classList.remove("tertiaryTable", "secondaryTable")
@@ -97,13 +114,21 @@ yhttp.onload = function () {
         clearButt.style.display = 'none';
     }
 
+    const sortByNameOnClick = () => {
+        const sortedArr = rawResponseArr.sort((show1, show2) => (show1.show.name.localeCompare(show2.show.name)))
+
+        fillTable(sortedArr)
+    }
+
 
     primaryButt.addEventListener('click', () => console.log('test'))
     primaryButt.addEventListener('click', primOnClick)
     secondButt.addEventListener('click', secondOnClick)
     thirdButt.addEventListener('click', tertiaryOnClick)
     clearButt.addEventListener('click', noThemeOnClick)
+    sortButt.addEventListener('click', sortByNameOnClick)
 
+    clearTable()
 
 
     showEl.appendChild(showsTable)
