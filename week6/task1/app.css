@@ -70,3 +70,17 @@ td {
     font-size: 1.5em;
     background-color: orange;
 }
+
+#sortByLanguage {
+    border: 1px solid yellow;
+    width: fit-content;
+    font-size: 1.5em;
+    background-color: yellow;
+}
+
+#sortByType {
+    border: 1px solid palevioletred;
+    width: fit-content;
+    font-size: 1.5em;
+    background-color: palevioletred;
+}

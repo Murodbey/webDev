@@ -45,12 +45,10 @@ yhttp.onload = function () {
     showsTrHed.appendChild(showsThRel)
 
     function clearTable() {
-        const allRows = document.getElementsByTagName('tr')
-        console.log(allRows)
-        const arrRows = [...allRows]
-        arrRows.forEach((item) => {
-            item.remove()
-        })
+        while (showsTable.children.length > 1) {
+            const childEl = showsTable.children[1]
+            showsTable.removeChild(childEl)
+        }
     }
 
 
@@ -85,11 +83,15 @@ yhttp.onload = function () {
     const thirdButt = document.querySelector('#tertiary')
     const clearButt = document.querySelector('#noThemes')
     const sortButt = document.querySelector('#sortByName')
+    const langButt = document.querySelector('#sortByLanguage')
+    const typeButt = document.querySelector('#sortByType')
     console.log(primaryButt)
     console.log(secondButt)
     console.log(thirdButt)
     console.log(clearButt)
     console.log(sortButt)
+    console.log(langButt)
+    console.log(typeButt)
 
     const primOnClick = () => {
         showsTable.classList.remove("tertiaryTable", "secondaryTable")
@@ -116,8 +118,20 @@ yhttp.onload = function () {
 
     const sortByNameOnClick = () => {
         const sortedArr = rawResponseArr.sort((show1, show2) => (show1.show.name.localeCompare(show2.show.name)))
-
+        clearTable()
         fillTable(sortedArr)
+    }
+
+    const sortByLangonClick = () => {
+        const langsortedArr = rawResponseArr.sort((show1, show2) => (show1.show.language.localeCompare(show2.show.language)))
+        clearTable()
+        fillTable(langsortedArr)
+    }
+
+    const sortByTypeonClick = () => {
+        const typesortedArr = rawResponseArr.sort((show1, show2) => (show1.show.type.localeCompare(show2.show.type)))
+        clearTable()
+        fillTable(typesortedArr)
     }
 
 
@@ -127,8 +141,9 @@ yhttp.onload = function () {
     thirdButt.addEventListener('click', tertiaryOnClick)
     clearButt.addEventListener('click', noThemeOnClick)
     sortButt.addEventListener('click', sortByNameOnClick)
+    langButt.addEventListener('click', sortByLangonClick)
+    typeButt.addEventListener('click', sortByTypeonClick)
 
-    clearTable()
 
 
     showEl.appendChild(showsTable)
