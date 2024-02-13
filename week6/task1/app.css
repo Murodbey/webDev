@@ -84,3 +84,10 @@ td {
     font-size: 1.5em;
     background-color: palevioletred;
 }
+
+#sortByDate {
+    border: 1px solid purple;
+    width: fit-content;
+    font-size: 1.5em;
+    background-color: purple;
+}

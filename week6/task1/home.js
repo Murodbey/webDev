@@ -51,9 +51,6 @@ yhttp.onload = function () {
         }
     }
 
-
-
-
     function fillTable(responseArray) {
         responseArray.forEach((item) => {
             console.log(item)
@@ -85,6 +82,7 @@ yhttp.onload = function () {
     const sortButt = document.querySelector('#sortByName')
     const langButt = document.querySelector('#sortByLanguage')
     const typeButt = document.querySelector('#sortByType')
+    const dateButt = document.querySelector('#sortByDate')
     console.log(primaryButt)
     console.log(secondButt)
     console.log(thirdButt)
@@ -92,6 +90,7 @@ yhttp.onload = function () {
     console.log(sortButt)
     console.log(langButt)
     console.log(typeButt)
+    console.log(dateButt)
 
     const primOnClick = () => {
         showsTable.classList.remove("tertiaryTable", "secondaryTable")
@@ -134,6 +133,12 @@ yhttp.onload = function () {
         fillTable(typesortedArr)
     }
 
+    const sortByDateonClick = () => {
+        const datesortedArr = rawResponseArr.sort((a, b) => (a.show.premiered.localeCompare(b.show.premiered)))
+        clearTable()
+        fillTable(datesortedArr)
+    }
+
 
     primaryButt.addEventListener('click', () => console.log('test'))
     primaryButt.addEventListener('click', primOnClick)
@@ -143,10 +148,9 @@ yhttp.onload = function () {
     sortButt.addEventListener('click', sortByNameOnClick)
     langButt.addEventListener('click', sortByLangonClick)
     typeButt.addEventListener('click', sortByTypeonClick)
-
+    dateButt.addEventListener('click', sortByDateonClick)
 
 
     showEl.appendChild(showsTable)
 
 }
-

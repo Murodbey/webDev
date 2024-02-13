@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <h1>Form</h1>
+    <div>
+        <form id="nameForm">
+            <label for="firstName">First Name</label>
+            <input type="text" name="first_name">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="last_name"> <br />
+            <label for="email">Email</label>
+            <input type="email" name="pochta">
+            <label for="password">Password</label>
+            <input type="password" name="parol">
+        </form>
+    </div>
+    <div>
+        <p id="error"></p>
+        <p id="success"></p>
+        <button onclick="registerFunc()">Register</button>
+    </div>
+
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>
